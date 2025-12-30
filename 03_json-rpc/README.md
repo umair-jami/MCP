@@ -24,7 +24,16 @@ A remote procedure call is initiated by sending a `Request` object to a server. 
 
   * **`jsonrpc`**: A string that specifies the version of the JSON-RPC protocol. For version 2.0, this **MUST** be exactly `"2.0"`.
   * **`method`**: A string containing the name of the method to be invoked on the server.
-  * **`params`**: A structured value (either an `Array` or `Object`) that holds the parameters for the method. This member can be omitted if the method doesn't require any parameters.
+  * **`params`**: A structured value (either an `Array` or `Object`) that holds the parameters for the method. This member can be omitted if the method doesn't require any parameters.ruc
+  This is structure of that particular params,
+  {
+    "params":{
+        name:(function name),
+        arguments:{
+            name:"umair"
+        }
+    }
+  }
   * **`id`**: An identifier established by the client. It can be a string, a number, or `null`. If it's not included, the request is considered a "notification."
 
 #### 2\. Notification
